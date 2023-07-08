@@ -51,7 +51,7 @@ body {
 }
 @media (min-width: 1024px) {
     #img-carteraid {
-        padding;
+
         grid-column: 1 /3;
         grid-row: 1 / 3;
     }
@@ -210,3 +210,17 @@ footer p {
 }
 
 /* fin de footer------------------ */
+
+/* mini bolsas ------------- */
+
+.error {
+    display: inline-block;
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+}
+
+.error img {
+    border-radius: 5%;
+}
+
