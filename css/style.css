@@ -21,6 +21,42 @@ body {
 
 
 /* Ajustes INDEX */
+
+#reciente-cartera h4{
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    color: palevioletred;
+    text-shadow: 2px 2px 2px #392D2A;
+}
+.galeria-cartera{
+    min-height: 100vh;
+    width: 75%;
+    outline: 5px solid #392D2A;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 10px;
+    background-color: #392D2A;
+}
+
+.img-cartera {
+    padding: 5px;
+    border-radius: 2%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (min-width: 1024px) {
+    #img-carteraid {
+        padding;
+        grid-column: 1 /3;
+        grid-row: 1 / 3;
+    }
+}
+
 .d-block{
     border-radius: 1%;
 }
