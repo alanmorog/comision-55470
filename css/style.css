@@ -214,13 +214,30 @@ footer p {
 /* mini bolsas ------------- */
 
 .error {
-    display: inline-block;
-    margin-top: 100px;
-    width: 100%;
-    text-align: center;
+    min-height: 75vh;
+    width: 75%;
+    outline: 5px solid #392D2A;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 10px;
+    background-color: #392D2A;
 }
 
 .error img {
     border-radius: 5%;
+    padding: 5px;
+    border-radius: 2%;
+    width: 100%;
+   /*  height: 100%; */
+    object-fit: cover;
 }
+
+.errorsection h4 {
+    text-align: center;
+    margin-top: 50px;
+}
+
 
