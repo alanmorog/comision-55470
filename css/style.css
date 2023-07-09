@@ -20,7 +20,7 @@ body {
 }
 
 
-/* Ajustes INDEX */
+/* Ajustes INDEX ----------------------*/
 
 #reciente-cartera h4{
     text-align: center;
@@ -71,6 +71,10 @@ body {
 .carousel-caption h5{
     font-size: 40px;
     font-style: italic;
+}
+
+.galeria-cartera img:hover {
+    filter: grayscale(1);
 }
 
 /* Ajustes Nosotros --------------------- */
@@ -239,5 +243,60 @@ footer p {
     text-align: center;
     margin-top: 50px;
 }
+/* contacto--------------------------------- */
+main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: auto;
+   margin-top: 10%;
+}
 
+.contenedor {
+    background-color: #392D2A;
+    display: inline-block;
+    border-radius: 2%;
+    padding: 10px;
+}
+
+.contenedor h2 {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.contenedor legend{
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.contenedor div {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 2px #000;
+}
+
+#nombre {
+    background-color: wheat;
+    padding: 4px;
+    width: 420px;
+}
+
+#correo {
+    background-color: wheat;
+    padding: 4px;
+    width: 420px;
+}
+#mensaje{
+    background-color: wheat;
+    padding: 4px;
+    width: 420px;
+}
+
+.contenedor div label {
+    width: 120px;
+    text-align: end;
+}
 
