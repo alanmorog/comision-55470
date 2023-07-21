@@ -1,79 +1,4 @@
 
-/* Ajustes Generales */
-body {
-    margin: 0;
-}
-.nav-link:hover {
-    color: palevioletred;
-}
-
-.navbar-nav me-auto:hover{
-    background-color: palevioletred;
-}
-
-.btn:hover {
-    background-color: palevioletred;
-}
-
-.navbar-brand:hover{
-    color: palevioletred;  
-}
-
-
-/* Ajustes INDEX ----------------------*/
-
-#reciente-cartera h4{
-    text-align: center;
-    font-size: 30px;
-    font-style: italic;
-    color: palevioletred;
-    text-shadow: 2px 2px 2px #392D2A;
-}
-.galeria-cartera{
-    min-height: 100vh;
-    width: 75%;
-    outline: 5px solid #392D2A;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: 
-    repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    gap: 10px;
-    background-color: #392D2A;
-}
-
-.img-cartera {
-    padding: 5px;
-    border-radius: 2%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-@media (min-width: 1024px) {
-    #img-carteraid {
-
-        grid-column: 1 /3;
-        grid-row: 1 / 3;
-    }
-}
-
-.d-block{
-    border-radius: 1%;
-}
-
-.carousel-caption{
-    font-size: 40px;
-    color: palevioletred;
-    text-shadow: 1px 1px 1px #000000;
-    font-style: italic;
-}
-
-.carousel-caption h5{
-    font-size: 40px;
-    font-style: italic;
-}
-
-
 /* Ajustes Nosotros --------------------- */
 
 #nosotros {
@@ -84,11 +9,9 @@ body {
     margin-right: 20%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr 1fr; */
     grid-gap:15px;
     justify-self: start;
-    /* grid-auto-rows: 100px auto; */
-}
+} 
 .img1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -129,12 +52,9 @@ body {
 }
 .img3 img{
     border-radius: 10px;
-}
+} 
 @media (max-width: 992px){
     #nosotros {
-        /* margin-top: 20px;
-        margin-left: 5%;
-        margin-right: 5%; */
         align-items: center;
         align-self: center;
         display: grid;
@@ -191,55 +111,8 @@ body {
     }
 }
 /* fin ajustes nosotros----------------------------- */
-/* Footer------------------ */
-footer{
-    background-color: #392D2A;
-    width: 100%;
-    height: 70px;
-    color: #fff;
-    border: 0;
-    margin-top: 50px;
-    padding: 0;
-    outline: 0;
-    display: block;
-}
-footer p {
-    text-align: center;
-    font-size: 15px;
-    font-family: sans-serif;
-    text-shadow: 2px 2px 2px #0f0f0f;
-}
 
-/* fin de footer------------------ */
 
-/* mini bolsas ------------- */
-
-.error {
-    min-height: 75vh;
-    width: 75%;
-    outline: 5px solid #392D2A;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: 
-    repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    gap: 10px;
-    background-color: #392D2A;
-}
-
-.error img {
-    border-radius: 5%;
-    padding: 5px;
-    border-radius: 2%;
-    width: 100%;
-   /*  height: 100%; */
-    object-fit: cover;
-}
-
-.errorsection h4 {
-    text-align: center;
-    margin-top: 50px;
-}
 /* contacto--------------------------------- */
 main {
    display: flex;
