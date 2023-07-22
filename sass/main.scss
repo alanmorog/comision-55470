@@ -1,49 +1,85 @@
 //archivos main de sass
+//fondo claro
+$color__central: #f4c284;
+$color__textos: #8c85f4;
+$color__shadows: #1a2431;
+$color__fondo: white;
+$fuente__texto: consolas;
 
+//fondo oscuro
+$color__central__dark: #025d5a;
+$color__textos__dark: rgb(181, 255, 234);
+$color__shadows__dark: #000000;
+$color__fondo__dark: grey;
 
 /* ajustes generales */
+
+
 body { //configuracion del body
+    background: rgb(26,36,49);
+    background: linear-gradient(90deg, rgba(26,36,49,1) 0%, rgba(79,109,146,1) 35%, rgba(132,182,244,1) 100%);
     margin: 0;
-    .nav-link:hover{ color: palevioletred;}
-    .navbar-nav me-auto:hover{background-color: palevioletred;}
-    .btn:hover{background-color: palevioletred;}
-    .navbar-brand:hover{color: palevioletred;}
+    .nav-link:hover{ 
+        color: $color__textos;
+        background-color: $color__fondo;
+        text-shadow: 10px 10px 10px $color__shadows;
+    }
+    .nav-link{
+        margin: 5px;
+        font-family: $fuente__texto;
+    }
+    .dropdown-menu{
+        .dropdown-item{
+            font-family: $fuente__texto;
+        }
+        .dropdown-item:hover{
+            color: $color__textos;
+            text-shadow: 10px 10px 10px $color__shadows
+        }
+    }
+    .navbar-nav me-auto:hover{background-color: $color__textos;}
+    .btn:hover{background-color: $color__textos;}
+    .navbar-brand:hover{
+        color: $color__textos;
+        background-color: $color__fondo;
+        text-shadow: 10px 10px 10px $color__shadows;
+    }
+    .navbar-brand{
+        font-family: $fuente__texto;
+    }
 }
 
 /* Ajustes INDEX */
 
 #reciente-cartera { // section del index
+    @media (min-width: 1024px) {
+        #img-carteraid {
+            grid-column: 1 /3;
+            grid-row: 1 / 3;
+        }
+    }
     h4{
         text-align: center;
         font-size: 30px;
         font-style: italic;
-        color: palevioletred;
-        text-shadow: 2px 2px 2px #392D2A;
+        color: $color__textos;
+        text-shadow: 2px 2px 2px $color__shadows;
     }
     .galeria-cartera{
         min-height: 100vh;
         width: 75%;
-        outline: 5px solid #392D2A;
+        outline: 5px solid $color__central;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 
         repeat(auto-fit, minmax(min(300px, 100%), 1fr));
         gap: 10px;
-        background-color: #392D2A;
+        background-color: $color__central;
         .img-cartera {
             padding: 5px;
             border-radius: 2%;
             width: 100%;
             height: 100%;
-        }
-        @media (min-width: 1024px) {
-            #img-carteraid {
-                grid-column: 1 /3;
-                grid-row: 1 / 3;
-            }
-        }
-        .d-block{
-            border-radius: 1%;
         }
     }
 }
@@ -52,16 +88,20 @@ body { //configuracion del body
     .carousel-inner{
         .carousel-item{
             img{
+                width: 100%;
+                height: auto;
                 border-radius: 1%;
             }
             .carousel-caption{ // estilos de texto dentro del carrusel
+                font-family: $fuente__texto;
                 font-size: 40px;
-                color: palevioletred;
+                color: $color__textos;
                 text-shadow: 1px 1px 1px #000000;
-                font-style: italic;
+                //font-style: italic;
                 h5{
+                    font-family: $fuente__texto;
                     font-size: 40px;
-                    font-style: italic;
+                    //font-style: italic;
                 }
             }
         }
@@ -72,10 +112,10 @@ body { //configuracion del body
 /* Ajustes Footer */
 
 footer{ //configuracion del footer
-    background-color: #392D2A;
+    background-color: $color__central;
     width: 100%;
     height: 70px;
-    color: #fff;
+    color: $color__textos;
     border: 0;
     margin-top: 50px;
     padding: 0;
@@ -83,9 +123,9 @@ footer{ //configuracion del footer
     display: block;
     p {
         text-align: center;
-        font-size: 15px;
+        font-size: 18px;
         font-family: sans-serif;
-        text-shadow: 2px 2px 2px #0f0f0f;
+        text-shadow: 1px 1px 1px $color__shadows;
     }
 }
 
@@ -95,13 +135,13 @@ footer{ //configuracion del footer
     .error{ //ajustes del div 
         min-height: 75vh;
         width: 75%;
-        outline: 5px solid #392D2A;
+        outline: 5px solid $color__central;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 
         repeat(auto-fit, minmax(min(300px, 100%), 1fr));
         gap: 10px;
-        background-color: #392D2A;
+        background-color: $color__central;
         img { //ajustes de la imagen
             border-radius: 5%;
             padding: 5px;
@@ -111,8 +151,9 @@ footer{ //configuracion del footer
         }
     }
     h4 { //centrado de texto
+        color: $color__textos;
+        text-shadow: 1px 1px 1px $color__central;
         text-align: center;
         margin-top: 50px;
     }
 }
-

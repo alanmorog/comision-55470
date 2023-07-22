@@ -1,37 +1,63 @@
 /* ajustes generales */
 body {
+  background: rgb(26, 36, 49);
+  background: linear-gradient(90deg, rgb(26, 36, 49) 0%, rgb(79, 109, 146) 35%, rgb(132, 182, 244) 100%);
   margin: 0;
 }
 body .nav-link:hover {
-  color: palevioletred;
+  color: #8c85f4;
+  background-color: white;
+  text-shadow: 10px 10px 10px #1a2431;
+}
+body .nav-link {
+  margin: 5px;
+  font-family: consolas;
+}
+body .dropdown-menu .dropdown-item {
+  font-family: consolas;
+}
+body .dropdown-menu .dropdown-item:hover {
+  color: #8c85f4;
+  text-shadow: 10px 10px 10px #1a2431;
 }
 body .navbar-nav me-auto:hover {
-  background-color: palevioletred;
+  background-color: #8c85f4;
 }
 body .btn:hover {
-  background-color: palevioletred;
+  background-color: #8c85f4;
 }
 body .navbar-brand:hover {
-  color: palevioletred;
+  color: #8c85f4;
+  background-color: white;
+  text-shadow: 10px 10px 10px #1a2431;
+}
+body .navbar-brand {
+  font-family: consolas;
 }
 
 /* Ajustes INDEX */
+@media (min-width: 1024px) {
+  #reciente-cartera #img-carteraid {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+}
 #reciente-cartera h4 {
   text-align: center;
   font-size: 30px;
   font-style: italic;
-  color: palevioletred;
-  text-shadow: 2px 2px 2px #392D2A;
+  color: #8c85f4;
+  text-shadow: 2px 2px 2px #1a2431;
 }
 #reciente-cartera .galeria-cartera {
   min-height: 100vh;
   width: 75%;
-  outline: 5px solid #392D2A;
+  outline: 5px solid #f4c284;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 10px;
-  background-color: #392D2A;
+  background-color: #f4c284;
 }
 #reciente-cartera .galeria-cartera .img-cartera {
   padding: 5px;
@@ -39,36 +65,29 @@ body .navbar-brand:hover {
   width: 100%;
   height: 100%;
 }
-@media (min-width: 1024px) {
-  #reciente-cartera .galeria-cartera #img-carteraid {
-    grid-column: 1/3;
-    grid-row: 1/3;
-  }
-}
-#reciente-cartera .galeria-cartera .d-block {
-  border-radius: 1%;
-}
 
 .carousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: auto;
   border-radius: 1%;
 }
 .carousel .carousel-inner .carousel-item .carousel-caption {
+  font-family: consolas;
   font-size: 40px;
-  color: palevioletred;
+  color: #8c85f4;
   text-shadow: 1px 1px 1px #000000;
-  font-style: italic;
 }
 .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+  font-family: consolas;
   font-size: 40px;
-  font-style: italic;
 }
 
 /* Ajustes Footer */
 footer {
-  background-color: #392D2A;
+  background-color: #f4c284;
   width: 100%;
   height: 70px;
-  color: #fff;
+  color: #8c85f4;
   border: 0;
   margin-top: 50px;
   padding: 0;
@@ -77,21 +96,21 @@ footer {
 }
 footer p {
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   font-family: sans-serif;
-  text-shadow: 2px 2px 2px #0f0f0f;
+  text-shadow: 1px 1px 1px #1a2431;
 }
 
 /* Ajustes de pagina Mini Bolsas */
 .errorsection .error {
   min-height: 75vh;
   width: 75%;
-  outline: 5px solid #392D2A;
+  outline: 5px solid #f4c284;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 10px;
-  background-color: #392D2A;
+  background-color: #f4c284;
 }
 .errorsection .error img {
   border-radius: 5%;
@@ -102,6 +121,8 @@ footer p {
      object-fit: cover;
 }
 .errorsection h4 {
+  color: #8c85f4;
+  text-shadow: 1px 1px 1px #f4c284;
   text-align: center;
   margin-top: 50px;
 }/*# sourceMappingURL=main.css.map */
