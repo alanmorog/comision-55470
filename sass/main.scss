@@ -35,7 +35,6 @@ body { //configuracion del body
             border-radius: 2%;
             width: 100%;
             height: 100%;
-            object-fit: cover;
         }
         @media (min-width: 1024px) {
             #img-carteraid {
@@ -49,16 +48,26 @@ body { //configuracion del body
     }
 }
 
-.carousel-caption{ // estilos de texto dentro del carrusel
-    font-size: 40px;
-    color: palevioletred;
-    text-shadow: 1px 1px 1px #000000;
-    font-style: italic;
-    h5{
-        font-size: 40px;
-        font-style: italic;
+.carousel{ // carrusel iamgen y texto
+    .carousel-inner{
+        .carousel-item{
+            img{
+                border-radius: 1%;
+            }
+            .carousel-caption{ // estilos de texto dentro del carrusel
+                font-size: 40px;
+                color: palevioletred;
+                text-shadow: 1px 1px 1px #000000;
+                font-style: italic;
+                h5{
+                    font-size: 40px;
+                    font-style: italic;
+                }
+            }
+        }
     }
 }
+
 
 /* Ajustes Footer */
 
