@@ -123,12 +123,13 @@ header .batto-logo {
   height: 100%;
 }
 #reciente-cartera .galeria-cartera .img-cartera:hover {
-  filter: brightness(80%);
-  animation: bombLeftOut;
+  filter: brightness(60%);
+  transition: all 1s;
 }
 
 .carousel .carousel-inner .carousel-item:hover img {
   filter: brightness(70%);
+  transition: all 1s;
 }
 .carousel .carousel-inner .carousel-item img {
   width: 100%;
@@ -182,7 +183,7 @@ header .batto-logo {
   height: 600px;
 }
 .categorias .img-categoria .texto-encima {
-  display: none;
+  visibility: hidden;
   font-family: consolas;
   font-size: x-large;
   background-color: red;
@@ -192,7 +193,7 @@ header .batto-logo {
   left: 40%;
 }
 .categorias .img-categoria .centrado {
-  display: none;
+  visibility: hidden;
   font-family: consolas;
   background-color: skyblue;
   position: absolute;
@@ -202,12 +203,17 @@ header .batto-logo {
 }
 .categorias .img-categoria:hover img {
   filter: brightness(60%);
+  transition: all 1s;
 }
 .categorias .img-categoria:hover .texto-encima {
-  display: block;
+  visibility: visible;
+  transform: translate(0, -15px);
+  transition: all 1s;
 }
 .categorias .img-categoria:hover .centrado {
-  display: block;
+  visibility: visible;
+  transform: translate(-46px);
+  transition: all 1s;
 }
 
 @media (max-width: 992px) {

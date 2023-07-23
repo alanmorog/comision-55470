@@ -136,8 +136,8 @@ header {
             height: 100%;
         }
         .img-cartera:hover{
-            filter: brightness(80%);
-            animation: bombLeftOut;
+            filter: brightness(60%);
+            transition: all 1s;
         }
     }
 }
@@ -147,6 +147,7 @@ header {
         .carousel-item:hover {
             img {
                 filter: brightness(70%);
+                transition: all 1s;
             }
         }
         .carousel-item{
@@ -205,7 +206,8 @@ header {
             height: 600px;
         }
         .texto-encima {
-            display: none;
+            visibility: hidden;
+            //display: none;
             font-family: $fuente__texto;
             font-size: x-large;
             background-color: red;
@@ -215,7 +217,8 @@ header {
             left: 40%;
         }
         .centrado {
-            display: none;
+            visibility: hidden;
+            //display: none;
             font-family: $fuente__texto;
             background-color: skyblue;
             position: absolute;
@@ -227,12 +230,17 @@ header {
     .img-categoria:hover {
         img {
             filter: brightness(60%);
+            transition: all 1s;
         }
         .texto-encima {
-            display: block;
+            visibility: visible;
+            transform: translate(0, -15px);
+            transition: all 1s;
         }
         .centrado{
-            display: block;
+            visibility: visible;
+            transform: translate(-46px);
+            transition: all 1s;
         }
     }
 }
