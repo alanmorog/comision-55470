@@ -1,23 +1,24 @@
 //archivos main de sass
 //fondo claro
-$color__central: #f4c284;
-$color__textos: #8c85f4;
+$color__central: #465858;
+$color__textos: #b7aedd;
 $color__shadows: #1a2431;
 $color__fondo: white;
 $fuente__texto: consolas;
-
+$gradiente__color1: #96c4c4;
+$gradiente__color2: rgb(255, 255, 255);
 //fondo oscuro
 $color__central__dark: #025d5a;
 $color__textos__dark: rgb(181, 255, 234);
 $color__shadows__dark: #000000;
 $color__fondo__dark: grey;
 
+
+
 /* ajustes generales */
-
-
 body { //configuracion del body
-    background: rgb(26,36,49);
-    background: linear-gradient(90deg, rgba(26,36,49,1) 0%, rgba(79,109,146,1) 35%, rgba(132,182,244,1) 100%);
+    background: $gradiente__color1;
+    background: linear-gradient(0deg, $gradiente__color1 0%, $gradiente__color2 100%);
     margin: 0;
     .nav-link:hover{ 
         color: $color__textos;
@@ -51,6 +52,33 @@ body { //configuracion del body
 
 /* Ajustes INDEX */
 
+header {
+    h5 {
+        text-align: center;
+        padding: 1px;
+        margin: 0;
+        font-family: $fuente__texto;
+        color: white;
+        background-color: $color__shadows__dark;
+    }
+    .batto-logo{
+        width: 50px;
+        height: auto;
+        border-radius: 30%;
+    }
+}
+
+.cuotas {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-family: $fuente__texto;
+    font-size: 50px;
+    color: white;
+    background-color: $color__shadows__dark;
+}
+
+
 #reciente-cartera { // section del index
     @media (min-width: 1024px) {
         #img-carteraid {
@@ -66,26 +94,70 @@ body { //configuracion del body
         text-shadow: 2px 2px 2px $color__shadows;
     }
     .galeria-cartera{
+        .paquete-venta {
+            display: inline-block;
+            position:relative;
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 50px;
+            .descuento {
+                font-family: $fuente__texto;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                background-color: #000000;
+                color: white;
+                padding: 2px;
+            }
+            .prod-nuevo {
+                position: absolute;
+                color: #000000;
+                font-family: $fuente__texto;
+                bottom: 0%;
+                right: 0%;
+                background-color: skyblue;
+            }
+            .cartel-precio {
+                font-family: $fuente__texto;
+                font-size: large;
+                font-style: oblique;
+            }
+            .cartel-cuotas {
+                font-family: $fuente__texto;
+                font-style: italic;
+                color: red;
+            }
+
+        }
         min-height: 100vh;
         width: 75%;
-        outline: 5px solid $color__central;
+        //outline: 5px solid $color__central;
         margin: 0 auto;
+        margin-bottom: 100px;
         display: grid;
         grid-template-columns: 
         repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-        gap: 10px;
-        background-color: $color__central;
+        gap: 50px;
+        //background-color: $color__central;
         .img-cartera {
             padding: 5px;
             border-radius: 2%;
             width: 100%;
             height: 100%;
         }
+        .img-cartera:hover{
+            filter: brightness(80%);
+        }
     }
 }
 
 .carousel{ // carrusel iamgen y texto
     .carousel-inner{
+        .carousel-item:hover {
+            img {
+                filter: brightness(70%);
+            }
+        }
         .carousel-item{
             img{
                 width: 100%;
@@ -99,15 +171,80 @@ body { //configuracion del body
                 text-shadow: 1px 1px 1px #000000;
                 //font-style: italic;
                 h5{
+                    text-shadow: -2px 2px 2px #fff;
+                    color: #000000;
+                    background-color: rgb(207, 8, 8);
+                    display: inline;
+                    margin: 0;
+                    padding: 2%;
                     font-family: $fuente__texto;
                     font-size: 40px;
                     //font-style: italic;
+                }
+                p {
+                    background-color: skyblue;
+                    display: inline-block;
+                    color: wheat;
+                    font-style: italic;
+                    font-family: $fuente__texto;
                 }
             }
         }
     }
 }
 
+//categorias
+.nuestras-categorias {
+    text-align: center;
+    margin: 0;
+    padding: 25px;
+    font-family: $fuente__texto;
+    font-size: xx-large;
+    font-style: oblique;
+    text-shadow: 2px 2px 10px $color__central__dark;
+}
+.categorias {
+    display: flex;
+    .img-categoria {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        img {
+            width: 450px;
+            height: 600px;
+        }
+        .texto-encima {
+            display: none;
+            font-family: $fuente__texto;
+            font-size: x-large;
+            background-color: red;
+            color: whitesmoke;
+            position: absolute;
+            bottom: 10px;
+            left: 40%;
+        }
+        .centrado {
+            display: none;
+            font-family: $fuente__texto;
+            background-color: skyblue;
+            position: absolute;
+            font-style: italic;
+            bottom: 10%;
+            left: 50%;
+        }
+    }
+    .img-categoria:hover {
+        img {
+            filter: brightness(60%);
+        }
+        .texto-encima {
+            display: block;
+        }
+        .centrado{
+            display: block;
+        }
+    }
+}
 
 /* Ajustes Footer */
 
@@ -115,7 +252,7 @@ footer{ //configuracion del footer
     background-color: $color__central;
     width: 100%;
     height: 70px;
-    color: $color__textos;
+    color: white;
     border: 0;
     margin-top: 50px;
     padding: 0;

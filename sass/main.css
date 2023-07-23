@@ -1,11 +1,11 @@
 /* ajustes generales */
 body {
-  background: rgb(26, 36, 49);
-  background: linear-gradient(90deg, rgb(26, 36, 49) 0%, rgb(79, 109, 146) 35%, rgb(132, 182, 244) 100%);
+  background: #96c4c4;
+  background: linear-gradient(0deg, #96c4c4 0%, rgb(255, 255, 255) 100%);
   margin: 0;
 }
 body .nav-link:hover {
-  color: #8c85f4;
+  color: #b7aedd;
   background-color: white;
   text-shadow: 10px 10px 10px #1a2431;
 }
@@ -17,17 +17,17 @@ body .dropdown-menu .dropdown-item {
   font-family: consolas;
 }
 body .dropdown-menu .dropdown-item:hover {
-  color: #8c85f4;
+  color: #b7aedd;
   text-shadow: 10px 10px 10px #1a2431;
 }
 body .navbar-nav me-auto:hover {
-  background-color: #8c85f4;
+  background-color: #b7aedd;
 }
 body .btn:hover {
-  background-color: #8c85f4;
+  background-color: #b7aedd;
 }
 body .navbar-brand:hover {
-  color: #8c85f4;
+  color: #b7aedd;
   background-color: white;
   text-shadow: 10px 10px 10px #1a2431;
 }
@@ -36,6 +36,30 @@ body .navbar-brand {
 }
 
 /* Ajustes INDEX */
+header h5 {
+  text-align: center;
+  padding: 1px;
+  margin: 0;
+  font-family: consolas;
+  color: white;
+  background-color: #000000;
+}
+header .batto-logo {
+  width: 50px;
+  height: auto;
+  border-radius: 30%;
+}
+
+.cuotas {
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  font-family: consolas;
+  font-size: 50px;
+  color: white;
+  background-color: #000000;
+}
+
 @media (min-width: 1024px) {
   #reciente-cartera #img-carteraid {
     grid-column: 1/3;
@@ -46,18 +70,51 @@ body .navbar-brand {
   text-align: center;
   font-size: 30px;
   font-style: italic;
-  color: #8c85f4;
+  color: #b7aedd;
   text-shadow: 2px 2px 2px #1a2431;
 }
 #reciente-cartera .galeria-cartera {
   min-height: 100vh;
   width: 75%;
-  outline: 5px solid #f4c284;
   margin: 0 auto;
+  margin-bottom: 100px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-  gap: 10px;
-  background-color: #f4c284;
+  gap: 50px;
+}
+#reciente-cartera .galeria-cartera .paquete-venta {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+#reciente-cartera .galeria-cartera .paquete-venta .descuento {
+  font-family: consolas;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: #000000;
+  color: white;
+  padding: 2px;
+}
+#reciente-cartera .galeria-cartera .paquete-venta .prod-nuevo {
+  position: absolute;
+  color: #000000;
+  font-family: consolas;
+  bottom: 0%;
+  right: 0%;
+  background-color: skyblue;
+}
+#reciente-cartera .galeria-cartera .paquete-venta .cartel-precio {
+  font-family: consolas;
+  font-size: large;
+  font-style: oblique;
+}
+#reciente-cartera .galeria-cartera .paquete-venta .cartel-cuotas {
+  font-family: consolas;
+  font-style: italic;
+  color: red;
 }
 #reciente-cartera .galeria-cartera .img-cartera {
   padding: 5px;
@@ -65,7 +122,13 @@ body .navbar-brand {
   width: 100%;
   height: 100%;
 }
+#reciente-cartera .galeria-cartera .img-cartera:hover {
+  filter: brightness(80%);
+}
 
+.carousel .carousel-inner .carousel-item:hover img {
+  filter: brightness(70%);
+}
 .carousel .carousel-inner .carousel-item img {
   width: 100%;
   height: auto;
@@ -74,20 +137,84 @@ body .navbar-brand {
 .carousel .carousel-inner .carousel-item .carousel-caption {
   font-family: consolas;
   font-size: 40px;
-  color: #8c85f4;
+  color: #b7aedd;
   text-shadow: 1px 1px 1px #000000;
 }
 .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+  text-shadow: -2px 2px 2px #fff;
+  color: #000000;
+  background-color: rgb(207, 8, 8);
+  display: inline;
+  margin: 0;
+  padding: 2%;
   font-family: consolas;
   font-size: 40px;
+}
+.carousel .carousel-inner .carousel-item .carousel-caption p {
+  background-color: skyblue;
+  display: inline-block;
+  color: wheat;
+  font-style: italic;
+  font-family: consolas;
+}
+
+.nuestras-categorias {
+  text-align: center;
+  margin: 0;
+  padding: 25px;
+  font-family: consolas;
+  font-size: xx-large;
+  font-style: oblique;
+  text-shadow: 2px 2px 10px #025d5a;
+}
+
+.categorias {
+  display: flex;
+}
+.categorias .img-categoria {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+.categorias .img-categoria img {
+  width: 450px;
+  height: 600px;
+}
+.categorias .img-categoria .texto-encima {
+  display: none;
+  font-family: consolas;
+  font-size: x-large;
+  background-color: red;
+  color: whitesmoke;
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+}
+.categorias .img-categoria .centrado {
+  display: none;
+  font-family: consolas;
+  background-color: skyblue;
+  position: absolute;
+  font-style: italic;
+  bottom: 10%;
+  left: 50%;
+}
+.categorias .img-categoria:hover img {
+  filter: brightness(60%);
+}
+.categorias .img-categoria:hover .texto-encima {
+  display: block;
+}
+.categorias .img-categoria:hover .centrado {
+  display: block;
 }
 
 /* Ajustes Footer */
 footer {
-  background-color: #f4c284;
+  background-color: #465858;
   width: 100%;
   height: 70px;
-  color: #8c85f4;
+  color: white;
   border: 0;
   margin-top: 50px;
   padding: 0;
@@ -105,12 +232,12 @@ footer p {
 .errorsection .error {
   min-height: 75vh;
   width: 75%;
-  outline: 5px solid #f4c284;
+  outline: 5px solid #465858;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 10px;
-  background-color: #f4c284;
+  background-color: #465858;
 }
 .errorsection .error img {
   border-radius: 5%;
@@ -121,8 +248,8 @@ footer p {
      object-fit: cover;
 }
 .errorsection h4 {
-  color: #8c85f4;
-  text-shadow: 1px 1px 1px #f4c284;
+  color: #b7aedd;
+  text-shadow: 1px 1px 1px #465858;
   text-align: center;
   margin-top: 50px;
 }/*# sourceMappingURL=main.css.map */
