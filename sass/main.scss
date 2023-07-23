@@ -1,17 +1,7 @@
 //archivos main de sass
-//fondo claro
-$color__central: #465858;
-$color__textos: #b7aedd;
-$color__shadows: #1a2431;
-$color__fondo: white;
-$fuente__texto: consolas;
-$gradiente__color1: #96c4c4;
-$gradiente__color2: rgb(255, 255, 255);
-//fondo oscuro
-$color__central__dark: #025d5a;
-$color__textos__dark: rgb(181, 255, 234);
-$color__shadows__dark: #000000;
-$color__fondo__dark: grey;
+
+//varaibles 
+@import 'variables';
 
 
 
@@ -147,6 +137,7 @@ header {
         }
         .img-cartera:hover{
             filter: brightness(80%);
+            animation: bombLeftOut;
         }
     }
 }
@@ -246,6 +237,50 @@ header {
     }
 }
 
+@media (max-width: 992px) {
+    .categorias {
+        align-items: center;
+        align-self: center;
+        display: inline-block;
+        position: relative;
+        margin: 0;
+        padding: 20%;
+        width: 75%;
+    }
+}
+
+@media (max-width: 426px) {
+    .categorias {
+        align-items: center;
+        align-self: center;
+        display: inline-block;
+        margin: 0;
+        padding: 20%;
+        left: 15%;
+        .img-categoria {
+            img {
+                display: inline-block;
+                position: relative;
+                width: 150px;
+                height: auto;
+            }
+            .texto-encima {
+                display: none;
+            }
+            .centrado {
+                display: none;
+            }
+        }
+        .img-categoria:hover {
+            .texto-encima{
+                display: none;
+            }
+            .centrado {
+                display: none;
+            }
+        }
+    }
+}
 /* Ajustes Footer */
 
 footer{ //configuracion del footer

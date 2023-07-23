@@ -124,6 +124,7 @@ header .batto-logo {
 }
 #reciente-cartera .galeria-cartera .img-cartera:hover {
   filter: brightness(80%);
+  animation: bombLeftOut;
 }
 
 .carousel .carousel-inner .carousel-item:hover img {
@@ -209,6 +210,45 @@ header .batto-logo {
   display: block;
 }
 
+@media (max-width: 992px) {
+  .categorias {
+    align-items: center;
+    align-self: center;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 20%;
+    width: 75%;
+  }
+}
+@media (max-width: 426px) {
+  .categorias {
+    align-items: center;
+    align-self: center;
+    display: inline-block;
+    margin: 0;
+    padding: 20%;
+    left: 15%;
+  }
+  .categorias .img-categoria img {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: auto;
+  }
+  .categorias .img-categoria .texto-encima {
+    display: none;
+  }
+  .categorias .img-categoria .centrado {
+    display: none;
+  }
+  .categorias .img-categoria:hover .texto-encima {
+    display: none;
+  }
+  .categorias .img-categoria:hover .centrado {
+    display: none;
+  }
+}
 /* Ajustes Footer */
 footer {
   background-color: #465858;
