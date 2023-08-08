@@ -36,6 +36,17 @@ body .navbar-brand {
 }
 
 /* Ajustes INDEX */
+header .h1-seo {
+  font-size: 30px;
+  text-align: center;
+  padding: 1px;
+  margin: 0;
+  font-family: consolas;
+  text-shadow: 1px 1px 1px #fff;
+  font-style: italic;
+  color: #b7aedd;
+  background-color: #000000;
+}
 header h5 {
   text-align: center;
   padding: 1px;
@@ -216,31 +227,43 @@ header .batto-logo {
   transition: all 1s;
 }
 
-@media (max-width: 992px) {
-  .categorias {
-    align-items: center;
-    align-self: center;
-    display: inline-block;
+@media screen and (min-width: 767px) and (max-width: 1025px) {
+  .img-categoria {
+    display: flex;
     position: relative;
-    margin: 0;
-    padding: 20%;
-    width: 75%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .img-categoria img {
+    padding: 2px;
+    max-width: 100%;
+    max-height: 80%;
+  }
+  .carousel-caption h5 {
+    font-size: 5px;
+  }
+  .carousel-caption p {
+    font-size: 20px;
   }
 }
-@media (max-width: 426px) {
+@media screen and (max-width: 766px) {
   .categorias {
+    margin: 5%;
     align-items: center;
     align-self: center;
-    display: inline-block;
-    margin: 0;
-    padding: 20%;
-    left: 15%;
+    display: grid;
+    max-width: 100%;
+    height: auto;
+  }
+  .categorias .img-categoria {
+    left: 5%;
+    padding: 5%;
+    justify-content: center;
+    align-items: center;
   }
   .categorias .img-categoria img {
-    display: inline-block;
-    position: relative;
-    width: 150px;
-    height: auto;
+    max-width: 90%;
+    height: 450px;
   }
   .categorias .img-categoria .texto-encima {
     display: none;
@@ -259,21 +282,216 @@ header .batto-logo {
 footer {
   background-color: #465858;
   width: 100%;
-  height: 70px;
+  height: 250px;
   color: white;
   border: 0;
   margin-top: 50px;
   padding: 0;
-  outline: 0;
-  display: block;
 }
-footer p {
+footer div {
+  display: inline-table;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+footer .navegacion {
+  width: 300px;
+  height: 200px;
+}
+footer .navegacion h4 {
+  font-family: consolas;
   text-align: center;
-  font-size: 18px;
-  font-family: sans-serif;
-  text-shadow: 1px 1px 1px #1a2431;
+}
+footer .navegacion a {
+  display: block;
+  width: 300px;
+  text-decoration: none;
+  color: wheat;
+  text-align: center;
+}
+footer .medios-pago {
+  width: 300px;
+  height: 200px;
+}
+footer .medios-pago h4 {
+  font-family: consolas;
+  text-align: center;
+}
+footer .medios-pago img {
+  padding: 0;
+  width: 60px;
+  margin: 2px;
+}
+footer .contactanos {
+  text-align: center;
+  width: 300px;
+  height: 200px;
+}
+footer .contactanos svg {
+  height: 1em;
+  margin: 0 10px 5px 0;
+  text-align: center;
+  color: #fff;
+  fill: #fff;
+}
+footer .contactanos a {
+  text-decoration: none;
+  color: wheat;
+}
+footer .redes-sociales {
+  text-align: center;
+  width: 300px;
+  height: 200px;
+}
+footer .redes-sociales svg {
+  height: 1em;
+  margin: 0 10px 5px 0;
+  text-align: center;
+  color: #fff;
+  fill: #fff;
+}
+footer .redes-sociales a {
+  text-decoration: none;
+  color: wheat;
 }
 
+@media screen and (max-width: 766px) {
+  footer {
+    max-width: 100%;
+    text-align: center;
+    background-color: #465858;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1025px) {
+  footer {
+    max-width: 100%;
+    text-align: center;
+    background-color: #465858;
+    height: 100%;
+  }
+}
+#nosotros .desc1 {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #000;
+  padding: 2%;
+}
+#nosotros .desc2 {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #000;
+  padding: 2%;
+}
+#nosotros .desc3 {
+  width: 400px;
+  height: 500px;
+  border: 1px solid #000;
+  padding: 2%;
+}
+#nosotros svg:hover {
+  transform: rotate(360deg);
+  stroke: #465858;
+  fill: wheat;
+  stroke-width: 5px;
+  transition: all 2s;
+}
+#nosotros .img1 {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #000;
+}
+#nosotros .img1 svg {
+  margin: 25px;
+  width: 150px;
+  height: 150px;
+  align-items: center;
+}
+#nosotros .img2 {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #000;
+}
+#nosotros .img2 svg {
+  margin: 25px;
+  width: 150px;
+  height: 150px;
+  align-items: center;
+}
+#nosotros .img3 {
+  width: 400px;
+  height: 500px;
+  border: 1px solid #000;
+}
+#nosotros .img3 svg {
+  margin: 25px;
+  width: 150px;
+  height: 150px;
+  align-items: center;
+}
+
+@media screen and (max-width: 766px) {
+  #nosotros .desc1 {
+    width: 200px;
+    height: 600px;
+    border: 1px solid #000;
+    padding: 2%;
+  }
+  #nosotros .desc2 {
+    width: 200px;
+    height: 600px;
+    border: 1px solid #000;
+    padding: 2%;
+  }
+  #nosotros .desc3 {
+    width: 200px;
+    height: 855px;
+    border: 1px solid #000;
+    padding: 2%;
+  }
+  #nosotros svg:hover {
+    transform: rotate(360deg);
+    stroke: #465858;
+    fill: wheat;
+    stroke-width: 5px;
+    transition: all 2s;
+  }
+  #nosotros .img1 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+  }
+  #nosotros .img1 svg {
+    margin: 25px;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+  }
+  #nosotros .img2 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+  }
+  #nosotros .img2 svg {
+    margin: 25px;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+  }
+  #nosotros .img3 {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+  }
+  #nosotros .img3 svg {
+    margin: 25px;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+  }
+}
 /* Ajustes de pagina Mini Bolsas */
 .errorsection .error {
   min-height: 75vh;
